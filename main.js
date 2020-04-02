@@ -8,14 +8,15 @@ const videos = [
     'https://ak2.picdn.net/shutterstock/videos/1031328632/preview/stock-footage-face-young-handsome-man-operator-look-at-camera-smie-taking-calls-smile-in-call-center-office.webm',
     'https://ak5.picdn.net/shutterstock/videos/1042086325/preview/stock-footage-head-shot-close-up-happy-old-retired-man-looking-at-camera-sitting-at-home-webcam-view-s.webm',
     'https://ak3.picdn.net/shutterstock/videos/1045309183/preview/stock-footage-confident-young-indian-muslim-business-woman-wear-hijab-speak-look-at-camera-islamic-arabic-lady.webm',
-    'https://ak9.picdn.net/shutterstock/videos/1039338329/preview/stock-footage-serious-senior-old-grandfather-talking-looking-at-camera-at-home-elder-man-online-teacher-blogger.webm'
+    'https://ak9.picdn.net/shutterstock/videos/1039338329/preview/stock-footage-serious-senior-old-grandfather-talking-looking-at-camera-at-home-elder-man-online-teacher-blogger.webm',
+    'https://ak0.picdn.net/shutterstock/videos/1028517230/preview/stock-footage-overjoyed-millennial-vloggers-record-amusing-video-couple-sitting-on-couch-chatting-looking-at-web.webm'
 ]
 
 function createVideos() {
     //TODO: select random element to be user's webcam.
     var videoSources = _.sampleSize(videos, 9);
     var containers = document.getElementsByClassName('zoomy');
-    var userIndex = _.random(9);
+    var userIndex = _.random(8);
     for (i = 0; i < videoSources.length; i++) {
         var container = containers[i];
         var player = document.createElement('video');
@@ -42,4 +43,15 @@ function createVideos() {
         container.appendChild(player);
     }
     
+}
+
+function randomTalking() {
+    var index = _.random(8);
+    var containers = document.getElementsByClassName('zoomy');
+    
+    for (i = 0; i < containers.length; i++) {
+        containers[i].style.outline = '2px none greenyellow'
+    }
+
+    containers[index].style.outline = '2px solid greenyellow';
 }
