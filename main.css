@@ -14,7 +14,7 @@
         "window4 window5 window6 sidebar"
         "window7 window7 window9 sidebar"
         "padding padding padding sidebar"
-        "bottom  bottom  bottom  bottom";
+        "bottom  bottom  bottom  sidebar";
     grid-column-gap: 0.5%;
     grid-row-gap: 0.3%;
     width: 100vw;
@@ -31,6 +31,8 @@
     background-color: darkslategrey;
     padding: 0;
     margin: 0;
+
+    overflow: scroll;
 }
 
 .control-bottom {
@@ -68,4 +70,43 @@
     background-size: cover;
     overflow: hidden;
     object-fit: cover;
+}
+
+.chat-element {
+    display: grid;
+    grid-template-columns: 48px auto;
+    grid-template-rows: 1em auto;
+    grid-template-areas: 
+        "image name"
+        "image message";
+
+    width: 90%;
+    margin: 5%;
+    height: 96px;
+    background-color: black;
+    color: oldlace;
+
+    border-radius: 3px;
+}
+
+.chat-icon {
+    grid-area: image;
+    vertical-align: middle;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 2px;
+}
+
+.chat-name {
+    grid-area: name;
+    padding-left: 8px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.chat-message {
+    padding-top: 5px;
+    padding-left: 8px;
+    grid-area: message;
+    overflow: hidden;
 }

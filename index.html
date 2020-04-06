@@ -16,14 +16,21 @@
             <div class='zoomy'></div>
             <div class='zoomy'></div>
             <div class='padding'></div>
-            <div class='control-side'>Sidebar</div>
+            <div class='control-side'>
+            </div>
             <div class='control-bottom'>Bottom Controls</div>
         </div>
     </body>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src='main.js'></script>
     <script>
+        getUsers();
         createVideos();
         setInterval(randomTalking, 1000);
+        setInterval(newChatMessage, 700);
     </script>
 </html>
